@@ -5,7 +5,7 @@ seoDescription: "Discover beginner-friendly AI tools like Claude, Cursor, and K9
 datePublished: Fri Mar 28 2025 23:27:08 GMT+0000 (Coordinated Universal Time)
 cuid: cm8tewpbi000109jl936c3w5y
 slug: ai-with-kubernetes
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1743204178928/80fdfae3-4be6-422e-9fde-f8ac92df579f.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1743204874819/2a7738b0-2d70-4332-96a7-c208afef6a25.png
 tags: ai, kubernetes, devops, cursor, chatgpt, claudeai
 
 ---
