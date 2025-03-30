@@ -16,6 +16,21 @@ This article explores three beginner-friendly approaches — [Claude Desktop](ht
 
 > The Model Context Protocol (MCP) is a powerful framework for integrating AI models into development environments. MCP enables seamless communication between AI systems and tools like Kubernetes by providing a standardized way to pass context and commands. With MCP, you can query cluster states, automate resource management, or even troubleshoot issues using natural language. To use MCP effectively with Kubernetes, you’ll need a compatible server setup that bridges your AI tool with kubectl, the Kubernetes command-line interface.
 
+There are many MCPs for Kubernetes, each with different features and programming languages like TypeScript, Go, and Python. They are still being actively developed, so there are some bugs. They are not quite ready for serious everyday use yet.
+
+1. [https://github.com/Flux159/mcp-server-kubernetes](https://github.com/Flux159/mcp-server-kubernetes) - TypeScript. This MCP is mentioned in the Anthropic documentation and looks promising. It also has more GitHub stars than the others.
+    
+2. [https://github.com/rohitg00/kubectl-mcp-server](https://github.com/rohitg00/kubectl-mcp-server) - A lot of declared functionality but currently less stable than others, Python-based.
+    
+3. [https://github.com/strowk/mcp-k8s-go](https://github.com/strowk/mcp-k8s-go) - Golang-based
+    
+4. [https://github.com/manusa/kubernetes-mcp-server](https://github.com/manusa/kubernetes-mcp-server) - Golang-based, but not just a wrapper around `kubectl` or `helm`—it doesn't require external dependencies.
+    
+5. [https://github.com/wenhuwang/mcp-k8s-eye](https://github.com/wenhuwang/mcp-k8s-eye) - Golang
+    
+
+In this article, I use the first two to demonstrate basic functionality.
+
 ## Approach 1: Claude Desktop
 
 ##### In my opinion, [Claude Desktop](https://claude.ai/download) is an excellent solution for communicating with MCP servers today because of its user-friendly interface. I will use `mcp-server-kubernetes` to link Claude with Kubernetes.
@@ -60,7 +75,7 @@ Claude uses `mcp-server-kubernetes` to handle the technical details, making Kube
 
 ### Step 1: Install mcp server
 
-Now I will use [kubectl-mcp-server](https://github.com/rohitg00/kubectl-mcp-server). Also, the mcp server from previous approach could be used too.
+Now I will use [kubectl-mcp-server](https://github.com/rohitg00/kubectl-mcp-server). You can also use the MCP server from the previous approach or any other from the list of MCPs mentioned earlier—they are interchangeable.
 
 ```bash
 pipx install kubectl-mcp-tool
@@ -113,17 +128,16 @@ Actually, this approach is different from the previous ones. It doesn’t use MC
 1. Install HolmesGPT ([instructions](https://github.com/robusta-dev/holmesgpt/blob/master/docs/installation.md#cli-installation))
     
 2. ```bash
-    # for mac
-    brew tap robusta-dev/homebrew-holmesgpt
-    brew install holmesgpt
+     # for mac
+     brew tap robusta-dev/homebrew-holmesgpt
+     brew install holmesgpt
     ```
     
-
-2. Export OpenAI API key, for example with `~/.zshrc`: `export OPENAI_API_KEY=XXX`
+3. Export OpenAI API key, for example with `~/.zshrc`: `export OPENAI_API_KEY=XXX`
     
     I bet you can easily Google how to get an API key. Certainly, you can use [other AIs](https://github.com/robusta-dev/holmesgpt/blob/master/docs/api-keys.md).
     
-3. Add Holmes as plugin to k9s: edit `~/Library/Application Support/k9s/plugins.yaml` (mac). See detailed instructions [here](https://github.com/robusta-dev/holmesgpt/blob/master/docs/k9s.md).
+4. Add Holmes as plugin to k9s: edit `~/Library/Application Support/k9s/plugins.yaml` (mac). See detailed instructions [here](https://github.com/robusta-dev/holmesgpt/blob/master/docs/k9s.md).
     
 
 ```yaml
