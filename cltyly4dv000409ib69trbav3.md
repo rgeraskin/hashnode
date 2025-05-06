@@ -1,5 +1,5 @@
 ---
-title: "Get a specific apiVersion manifest from k8s"
+title: "Get a Specific apiVersion Manifest From K8S"
 datePublished: Tue Mar 19 2024 16:47:27 GMT+0000 (Coordinated Universal Time)
 cuid: cltyly4dv000409ib69trbav3
 slug: get-a-specific-apiversion-manifest-from-k8s
