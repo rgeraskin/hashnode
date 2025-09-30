@@ -1,7 +1,7 @@
 ---
 title: "Mastering Terraform Debugging: Tips and Techniques 🔧"
-seoTitle: "Terraform Expression Debugging: Logging Tricks"
-seoDescription: "Debug Terraform expressions with clever logging. Learn how to use Terraform logging tricks to troubleshoot your IaC code like a pro"
+seoTitle: "Terraform Debugging: Essential Tips and Techniques"
+seoDescription: "Guide to Terraform debugging with these essential tips and techniques for using the Terraform console and more"
 datePublished: Sun Jun 02 2024 12:50:13 GMT+0000 (Coordinated Universal Time)
 cuid: clwxjhx89000108ju66k67cbn
 slug: terraform-expressions-debugging
