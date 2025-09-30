@@ -1,5 +1,7 @@
 ---
 title: "Introducing GoDiffYAML Tool 💪"
+seoTitle: "Simplify Multi-Document YAML Diffs with GoDiffYAML"
+seoDescription: "Compare multi-document YAML easily with GoDiffYAML. It tracks document order & nested keys to produce clear, human-readable diffs of Kubernetes configs"
 datePublished: Mon May 05 2025 23:04:33 GMT+0000 (Coordinated Universal Time)
 cuid: cmabou0vu00050ajlfhgu9ahu
 slug: godiffyaml
